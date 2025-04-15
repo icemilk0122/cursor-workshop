@@ -1,0 +1,15 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# 當遇到以下錯誤類型時，採取相應策略：
+
+- 如果目前不在 Next.js 專案目錄，請先切換至正確的專案目錄後再執行相關指令。
+- 如果確實需要新開一個伺服器實例，請使用 `yarn dev:force`
+- 語法錯誤：先檢查最近修改的程式碼
+- 無限循環、阻塞、time-out 時間設定過長
+- 模組未找到：檢查 import/require 語句和依賴安裝、再檢查近期調整的 export 相關模組
+- 伺服器端口衝突：檢查是否有多個 Next.js 實例在運行，使用 `yarn dev` 而非 `next dev` 啟動
+- 執行測試時，使用 `yarn test` 或 `yarn test:ui`，確保測試使用正確的伺服器端口
+- 自動化測試連線失敗：確認測試使用動態 `baseURL` 而非硬編碼端口，使用相對路徑訪問頁面
